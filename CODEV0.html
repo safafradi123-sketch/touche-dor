@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touche d'Or Couture</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f3f0ff; }
+        header { background-color: #8b5cf6; color: white; padding: 20px; text-align: center; font-size: 30px; font-weight: bold; }
+        nav { background: #4c1d95; padding: 12px; text-align: center; }
+        nav a { color: #f8f5ff; margin: 0 20px; text-decoration: none; font-size: 18px; font-weight: bold; }
+        .hero { text-align: center; padding: 50px; background: white; }
+        .hero h1 { font-size: 42px; color: #4c1d95; }
+        .hero p { font-size: 19px; color: #555; }
+
+        .products { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 25px; 
+            padding: 40px; 
+        }
+        .product-card { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 15px; 
+            text-align: center; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+        }
+        .product-card img { width: 100%; border-radius: 12px; height: 200px; object-fit: cover; }
+        .btn-whatsapp { margin-top: 10px; display: inline-block; background-color: #25D366; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+        footer { background: #2e1065; color: white; text-align: center; padding: 20px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <header>Touche d'Or – Couture & Accessoires</header>
+
+    <nav>
+        <a href="#home">Accueil</a>
+        <a href="#produits">Produits</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Créations cousues main</h1>
+        <p>Trousses – pochettes – housses PC – accessoires uniques</p>
+    </section>
+
+    <section class="products" id="produits">
+        <div class="product-card">
+            <img src="trousse pc.png" alt="Trousse PC" />
+            <h3>Trousse PC</h3>
+            <p>Protection PC – Fait main – Haute qualité</p>
+            <strong>7 DT</strong>
+            <a href="commande.html?produit=Trousse%20PC" class="btn-whatsapp">Commander</a>
+        </div>
+
+        <div class="product-card">
+            <img src="tousse maquillage.png" alt="Trousse maquillage" />
+            <h3>Trousse Maquillage</h3>
+            <p>Compacte – Élégante – Customisable</p>
+            <strong>5 DT</strong>
+            <a href="commande.html?produit=Trousse%20Maquillage" class="btn-whatsapp">Commander</a>
+        </div>
+
+        <div class="product-card">
+            <img src="\Users\21651\Desktop\SITE\porte monnaie .png"" alt="Porte monnaie" />
+            <h3>Trousse Porte-Monnaie</h3>
+            <p>Mini – Pratique – Fait main</p>
+            <strong>3 DT</strong>
+            <a href="commande.html?produit=Porte-Monnaie" class="btn-whatsapp">Commander</a>
+        </div>
+
+        <div class="product-card">
+            <img src="\Users\21651\Desktop\SITE\trousse tablette .png"" alt="Pochette tablette" />
+            <h3>Pochette Tablette</h3>
+            <p>Protection + Style – Idéale pour tablette</p>
+            <strong>6 DT</strong>
+            <a href="commande.html?produit=Pochette%20Tablette" class="btn-whatsapp">Commander</a>
+        </div>
+
+        <div class="product-card">
+            <img src="chouchou.png" alt="Chouchou" />
+            <h3>Chouchou</h3>
+            <p>Accessoire cheveux coloré et pratique</p>
+            <strong>2 DT</strong>
+            <a href="commande.html?produit=Chouchou" class="btn-whatsapp">Commander</a>
+        </div>
+    </section>
+
+    <section class="hero" id="apropos">
+        <h1>À propos</h1>
+        <p>Nous sommes Safa & Amine, passionnées de couture. Chaque création est faite à la main avec soin et précision.</p>
+    </section>
+
+    <section class="hero" id="contact">
+        <h1>Contact</h1>
+        <p>Téléphone : 25025195 / 51070985<br>
+        Instagram : Touche d'Or by S&A</p>
+    </section>
+
+    <footer>
+        © 2025 Touche d'Or – Créations artisanales
+    </footer>
+</body>
+</html>

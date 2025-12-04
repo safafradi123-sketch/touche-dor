@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commande Touche d'Or</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f3f0ff; }
+        header { background-color: #8b5cf6; color: white; padding: 20px; text-align: center; font-size: 28px; font-weight: bold; }
+        form { max-width: 400px; margin: 50px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 8px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background-color: #8b5cf6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #6b3cb5; }
+        .success { text-align: center; color: green; font-weight: bold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>Passer votre commande</header>
+
+    <form id="orderForm">
+        <label>Produit</label>
+        <input type="text" id="produit" readonly />
+
+        <label>Nom</label>
+        <input type="text" id="nom" required />
+
+        <label>Prénom</label>
+        <input type="text" id="prenom" required />
+
+        <label>Téléphone</label>
+        <input type="tel" id="telephone" required />
+
+        <label>Adresse</label>
+        <textarea id="adresse" required></textarea>
+
+        <button type="submit">Valider la commande</button>
+        <div class="success" id="successMsg"></div>
+    </form>
+
+    <script>
+        // Remplir automatiquement le produit depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const produit = urlParams.get('produit');
+        document.getElementById('produit').value = produit;
+
+        // Gestion de la soumission du formulaire
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successMsg').textContent = "Votre commande pour '" + produit + "' a été passée avec succès !";
+            // Réinitialiser le formulaire sauf le produit
+            this.nom.value = '';
+            this.prenom.value = '';
+            this.telephone.value = '';
+            this.adresse.value = '';
+        });
+    </script>
+</body>
+</html>
